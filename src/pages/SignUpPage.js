@@ -20,7 +20,7 @@ const SignUpPage = () => {
         status: userType  // status 값으로 'Professor' 또는 'Student' 전송
       };
 
-    axios.post('http://localhost:3000/users/signup', dataToSend)
+    axios.post('http://localhost:3000/users/signup', dataToSend, { withCredentials: true })
       .then(response => {
         console.log('회원가입 성공:', response.data);
         navigate('/');

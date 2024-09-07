@@ -11,10 +11,12 @@ const LoginPage = () => {
 
   const onFinish = (values) => {
     console.log('Success:', values);
-    axios.post('http://localhost:3000/users/login', values)
+    axios.post('http://localhost:3000/users/login', values, { withCredentials: true })
       .then(response => {
         console.log('로그인 성공:', response.data);
-        const {status} = response.data;
+        const {userId, status} = response.data;
+        localStorage.setItem('userId', userId);
+        console.log("userId: ", userId)
         console.log("status: ", status);
         if (status === 'Professor'){
             navigate('/professor-main');
