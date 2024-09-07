@@ -1,8 +1,21 @@
-import React from 'react';
+// src/pages/StudentMainPage.js
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import NavbarMain from '../components/NavbarMain';
 import '../styles/MainPage.css';
 
 const StudentMainPage = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // 로컬 스토리지에서 userId가 없으면 로그인 페이지로 이동
+    const userId = localStorage.getItem('userId');
+    console.log("userId: ", userId);
+    if (!userId) {
+      navigate('/');  // 로그인 페이지로 이동
+    }
+  }, [navigate]);
+
   return (
     <div className="main-container">
       <NavbarMain />
