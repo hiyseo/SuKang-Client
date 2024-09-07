@@ -1,0 +1,69 @@
+/* src/styles/LoginPage.css */
+.login-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-color: #f0f2f5;
+    height: 100vh;
+    padding-top: 60px;
+  }
+  
+  .login-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+  }
+  
+  .left-section {
+    flex: 1;
+  }
+  
+  .right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .site-title {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .site-title h1 {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  
+  .site-title h2 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  .login-image {
+    width: 400px;
+    height: auto;
+  }
+  
+  .login-form {
+    background-color: #e6f7ff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+  
+  .login-button {
+    width: 100%;
+  }
+  
+  .signup-link {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: #1890ff;
+  }
+  
