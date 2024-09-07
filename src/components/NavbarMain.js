@@ -1,13 +1,21 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import '../styles/NavbarMain.css';
+import {useNavigate} from 'react-router-dom';
 import { FaUserCircle, FaTimes } from 'react-icons/fa';
 import axios from 'axios';
 import Modal from 'react-modal';
 
 const NavbarMain = () => {
+  const [status, setStatus] = useState('');
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [profileData, setProfileData] = useState({ name: '', status: '' });
+  const navigate = useNavigate();
 
+  useEffect(() => {
+    const storedStatus = localStorage.getItem('status');
+    console.log("Status: ", storedStatus);
+    setStatus(storedStatus);
+  })
   // 사람 아이콘을 클릭하면 프로필 정보를 가져오는 함수
   const handleProfileClick = () => {
     axios.get('http://localhost:3000/users/profile', {withCredentials: true})
@@ -43,13 +51,37 @@ const NavbarMain = () => {
     window.location.href = '/';
   };
 
+  const handleCourseClick = () => {
+    if(status === 'Student'){
+      navigate('/courses/enroll');
+    } else if(status === 'Professor'){
+      navigate('courses/register');
+    }
+  }
+
+  const handleBoardClick = () => {
+    if(status === 'Student'){
+      navigate('/boards/lists');
+    } else if(status === 'Professor'){
+      navigate('boards/post');
+    }
+  }
+
+  const handleMypageClick = () => {
+    if(status === 'Student'){
+      navigate('/mypages/student');
+    } else if(status === 'Professor'){
+      navigate('mypages/professor');
+    }
+  }
+
   return (
     <nav className="navbar">
       <div className="navbar-logo">suKang</div>
       <div className="navbar-menu">
-        <a href="/courses">강의</a>
-        <a href="/boards">게시물</a>
-        <a href="/mypage">마이페이지</a>
+        <a onClick={handleCourseClick}>강의</a>
+        <a onClick={handleBoardClick}>게시물</a>
+        <a onClick={handleMypageClick}>마이페이지</a>
         <FaUserCircle className="navbar-icon" onClick={handleProfileClick}/>
       </div>
       {/* 모달 창 */}

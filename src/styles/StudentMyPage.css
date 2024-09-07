@@ -1,0 +1,121 @@
+.mypage-container {
+    width: 90%;
+    margin: 20px auto;
+    /* padding-top: 60px; */
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .mypage-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .mypage-table th, .mypage-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+  }
+  
+  .mypage-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .mypage-table td {
+    text-align: left;
+  }
+  
+  .mypage-table td:nth-child(6) {
+    text-align: center;
+  }
+  
+  .mypage-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .mypage-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .cancel-button {
+    background-color: #ff4d4f;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .cancel-button:hover {
+    background-color: #d9363e;
+  }
+  
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;  /* 전체 화면 높이 */
+    padding-top: 60px;  /* Navbar 높이만큼 패딩 추가 */
+  }
+
+/* 모달 창 스타일 */
+.course-modal .ant-modal-content {
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .modal-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .course-info {
+    width: 50%; /* 강의 정보 크기 작게 */
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .post-list {
+    width: 80%; /* 게시물 목록 크기 작게 */
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .course-info h2, .post-list h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .course-info p, .post-list ul {
+    margin-bottom: 10px;
+  }
+  
+  .post-list ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .post-item {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .post-item strong {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  /* 모달 제목 커스터마이즈 */
+.course-modal .ant-modal-title {
+    font-size: 1.3rem; /* 원하는 크기로 설정 */
+    font-weight: bold; /* 제목을 더 강조 */
+    color: #333; /* 제목의 색상 변경 */
+    
+  }

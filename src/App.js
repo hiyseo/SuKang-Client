@@ -4,6 +4,9 @@ import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
 import ProfessorMainPage from './pages/ProfessorMainPage';
 import StudentMainPage from './pages/StudentMainPage';
+import CourseList from './pages/CourseList';
+import BoardList from './pages/BoardList';
+import StudentMyPage from './pages/StudentMyPage';
 
 function App() {
   return (
@@ -13,6 +16,9 @@ function App() {
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/professor-main" element={<ProfessorMainPage />} />
         <Route path="/student-main" element={<StudentMainPage />} />
+        <Route path="/courses/enroll" element={<CourseList />} />
+        <Route path="/boards/lists" element={<BoardList />} />
+        <Route path="/mypages/student" element={<StudentMyPage/>} />
       </Routes>
     </Router>
   );
