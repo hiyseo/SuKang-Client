@@ -1,0 +1,40 @@
+/* src/styles/SignUpPage.css */
+.signup-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 100vh;
+    background-color: #f0f2f5;
+    padding-top: 60px; /* 네비게이션 바 높이 */
+  }
+  
+  .signup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 1200px;
+  }
+  
+  .site-title {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .signup-form {
+    background-color: #e6f7ff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 400px;
+  }
+  
+  .signup-form .ant-form-item {
+    margin-bottom: 16px;
+  }
+  
+  .signup-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  

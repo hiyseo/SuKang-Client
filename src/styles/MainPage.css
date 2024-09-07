@@ -1,0 +1,42 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: #f0f2f5;
+  }
+  
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    flex-grow: 1; /* 상단과 하단의 네비게이션 바와 이미지 사이를 채우기 위해 사용 */
+  }
+  
+  .site-title {
+    text-align: right;
+    margin-right: 50px;
+  }
+  
+  .site-title h1 {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  
+  .site-title h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 0;
+  }
+  
+  /* 하단 이미지 */
+  .main-image {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto; /* 이미지를 화면 중앙에 배치 */
+    object-fit: cover; /* 이미지 비율 유지 */
+  }
+  
