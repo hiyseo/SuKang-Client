@@ -1,0 +1,70 @@
+/* src/styles/CourseList.css */
+.course-list-container {
+  padding: 20px;
+}
+
+.department-select {
+  margin-bottom: 20px;
+}
+
+.department-select select {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.course-table th, .course-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.course-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* 신청 버튼 */
+.course-table td .enroll-button {
+  padding: 5px 10px;
+  background-color: #1890ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.course-table td .enroll-button:hover {
+  background-color: #40a9ff;
+}
+
+/* 정원 초과일 때 버튼 스타일 */
+.course-table td .full-capacity {
+  padding: 5px 10px;
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: not-allowed;
+  opacity: 0.6;  /* 비활성화된 상태를 시각적으로 표시 */
+}
+
+/* 페이지 전체 레이아웃 */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;  /* 전체 화면 높이 */
+    padding-top: 60px;  /* Navbar 높이만큼 패딩 추가 */
+  }
+  
+  /* 강의 목록 컨테이너 */
+  .course-list-container {
+    flex-grow: 1;  /* 남은 공간을 모두 차지 */
+    padding: 20px;
+    overflow-y: auto;  /* 필요 시 스크롤 */
+  }

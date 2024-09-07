@@ -16,6 +16,7 @@ const LoginPage = () => {
         console.log('로그인 성공:', response.data);
         const {userId, status} = response.data;
         localStorage.setItem('userId', userId);
+        localStorage.setItem('status', status);
         console.log("userId: ", userId)
         console.log("status: ", status);
         if (status === 'Professor'){

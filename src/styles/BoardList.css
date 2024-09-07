@@ -1,0 +1,58 @@
+.board-list-container {
+    width: 90%;
+    margin: 20px auto;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .board-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .board-table th, .board-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+  }
+  
+  .board-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .board-table td {
+    text-align: left;
+  }
+  
+  .board-table td:nth-child(4) {
+    text-align: center; /* 작성 시간 가운데 정렬 */
+  }
+  
+  .board-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .board-table tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  /* 페이지 전체 레이아웃 */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;  /* 전체 화면 높이 */
+    padding-top: 60px;  /* Navbar 높이만큼 패딩 추가 */
+  }
+  
+  /* 강의 목록 컨테이너 */
+  .board-list-container {
+    flex-grow: 1;  /* 남은 공간을 모두 차지 */
+    padding: 20px;
+    overflow-y: auto;  /* 필요 시 스크롤 */
+  }
+  

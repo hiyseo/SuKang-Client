@@ -31,6 +31,8 @@
   .navbar-icon {
     font-size: 24px;
     color: #000;
+    cursor: pointer;
+
   }
   
   /* 모달 오버레이 */
@@ -88,3 +90,16 @@
     font-size: 20px;
     cursor: pointer;
   }
+
+  /* src/styles/NavbarMain.css */
+
+/* 기본 메뉴 스타일 */
+.navbar-menu a {
+    padding: 10px 20px;
+    font-size: 18px;  /* 글자 크기 */
+    text-decoration: none;
+    color: #000;  /* 기본 텍스트 색상 */
+    cursor: pointer;  /* 마우스를 올렸을 때 포인터 커서 */
+  }
+  
+  
