@@ -44,7 +44,9 @@ const StudentMyPage = () => {
   // 수강취소 함수
   const handleCancelCourse = (course_id) => {
     const user_id = localStorage.getItem('userId');
-    axios.delete(`http://localhost:3000/mypages/student?course_id=${course_id}&student_id=${user_id}`, {withCredentials: true})
+    console.log("User Id: ", user_id);
+    console.log("Course Id: ", course_id);
+    axios.delete(`http://localhost:3000/mypages/student/course?course_id=${course_id}&user_id=${user_id}`, {withCredentials: true})
       .then(response => {
         console.log('수강 취소 성공:', response.data);
         setCourses(courses.filter(course => course.course_id !== course_id)); // 목록에서 해당 강의 제거
@@ -95,6 +97,7 @@ const StudentMyPage = () => {
             <div>
               <h2>강의 정보</h2>
               <p>교수명: {selectedCourse.professor_name}</p>
+              <p>이메일: {selectedCourse.professor_email}</p>
               <p>강의장소: {selectedCourse.course_location}</p>
               <p>강의시간: {selectedCourse.course_days} {selectedCourse.course_time}</p>
 

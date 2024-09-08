@@ -24,8 +24,10 @@ const LoginPage = () => {
         console.log("name: ", name);
         console.log("username: ", username);
         if (status === 'Professor'){
+            console.log("userID: ", userId);
             navigate('/professor-main');
         } else if (status === 'Student'){
+            console.log("userID: ", userId);
             navigate('/student-main');
         }
       })
