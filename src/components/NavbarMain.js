@@ -15,7 +15,8 @@ const NavbarMain = () => {
     const storedStatus = localStorage.getItem('status');
     console.log("Status: ", storedStatus);
     setStatus(storedStatus);
-  })
+  }, []);
+
   // 사람 아이콘을 클릭하면 프로필 정보를 가져오는 함수
   const handleProfileClick = () => {
     axios.get('http://localhost:3000/users/profile', {withCredentials: true})
@@ -48,7 +49,10 @@ const NavbarMain = () => {
     localStorage.removeItem('userId'); // 로컬 스토리지에서 사용자 정보 제거
     setModalIsOpen(false);
     // 로그아웃 후 리디렉션 (예: 로그인 페이지로)
-    window.location.href = '/';
+    localStorage.removeItem('status');
+    localStorage.removeItem('name');
+    localStorage.removeItem('username');
+    navigate('/');
   };
 
   const handleCourseClick = () => {
@@ -57,7 +61,7 @@ const NavbarMain = () => {
     } else if(status === 'Professor'){
       navigate('/courses/register');
     }
-  }
+  };
 
   const handleBoardClick = () => {
     if(status === 'Student'){
@@ -65,7 +69,7 @@ const NavbarMain = () => {
     } else if(status === 'Professor'){
       navigate('/boards/post');
     }
-  }
+  };
 
   const handleMypageClick = () => {
     if(status === 'Student'){
@@ -73,11 +77,20 @@ const NavbarMain = () => {
     } else if(status === 'Professor'){
       navigate('/mypages/professor');
     }
-  }
+  };
+
+  // suKang 로고 클릭 시 처리하는 함수
+  const handleLogoClick = () => {
+    if(status === 'Student'){
+      navigate('/student-main');
+    } else if(status === 'Professor'){
+      navigate('/professor-main');
+    }
+  };
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">suKang</div>
+      <div className="navbar-logo" onClick={handleLogoClick}>suKang</div> {/* 로고 클릭 시 이동 */}
       <div className="navbar-menu">
         <a onClick={handleCourseClick}>강의</a>
         <a onClick={handleBoardClick}>게시물</a>
