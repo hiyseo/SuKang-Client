@@ -9,6 +9,7 @@ import BoardList from './pages/BoardList';
 import StudentMyPage from './pages/StudentMyPage';
 import RegisterCourse from './pages/RegisterCourse';
 import BoardPost from './pages/BoardPost';
+import ProfessorMyPage from './pages/ProfessorMyPage';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/mypages/student" element={<StudentMyPage/>} />
         <Route path="/courses/register" element={<RegisterCourse />} />
         <Route path="/boards/post" element={<BoardPost />} />
+        <Route path="/mypages/professor" element={<ProfessorMyPage/>} />
       </Routes>
     </Router>
   );
