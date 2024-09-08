@@ -14,11 +14,15 @@ const LoginPage = () => {
     axios.post('http://localhost:3000/users/login', values, { withCredentials: true })
       .then(response => {
         console.log('로그인 성공:', response.data);
-        const {userId, status} = response.data;
+        const {userId, status, name, username} = response.data;
         localStorage.setItem('userId', userId);
         localStorage.setItem('status', status);
+        localStorage.setItem('name', name);
+        localStorage.setItem('username', username);
         console.log("userId: ", userId)
         console.log("status: ", status);
+        console.log("name: ", name);
+        console.log("username: ", username);
         if (status === 'Professor'){
             navigate('/professor-main');
         } else if (status === 'Student'){

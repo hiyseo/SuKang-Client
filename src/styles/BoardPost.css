@@ -1,0 +1,114 @@
+/* 전체 페이지 배경을 흰색으로 설정 */
+body {
+    background-color: #ffffff; /* 페이지 전체 배경을 흰색으로 설정 */
+  }
+  
+  .board-post-container {
+    width: 100vw;
+    height: 100vw;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff; /* 배경을 하얀색으로 변경 */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .board-post-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .board-post-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .board-post-form input[type="text"],
+  .board-post-form textarea,
+  .board-post-form select {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .board-post-form textarea {
+    resize: vertical;
+    height: 150px;
+  }
+  
+  .board-post-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .board-post-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .board-post-message {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #28a745;
+  }
+  
+  .board-post-container select {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  .board-post-form select option {
+    font-size: 16px;
+  }
+  
+  .board-post-form input,
+  .board-post-form textarea,
+  .board-post-form select {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  @media (max-width: 768px) {
+    .board-post-container {
+      width: 90%;
+      margin: 20px auto;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    .board-post-form input[type="text"],
+    .board-post-form textarea {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .board-post-form button {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  
