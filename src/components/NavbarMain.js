@@ -55,7 +55,7 @@ const NavbarMain = () => {
     if(status === 'Student'){
       navigate('/courses/enroll');
     } else if(status === 'Professor'){
-      navigate('courses/register');
+      navigate('/courses/register');
     }
   }
 
@@ -63,7 +63,7 @@ const NavbarMain = () => {
     if(status === 'Student'){
       navigate('/boards/lists');
     } else if(status === 'Professor'){
-      navigate('boards/post');
+      navigate('/boards/post');
     }
   }
 
@@ -71,7 +71,7 @@ const NavbarMain = () => {
     if(status === 'Student'){
       navigate('/mypages/student');
     } else if(status === 'Professor'){
-      navigate('mypages/professor');
+      navigate('/mypages/professor');
     }
   }
 

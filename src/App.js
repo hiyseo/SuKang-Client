@@ -7,6 +7,8 @@ import StudentMainPage from './pages/StudentMainPage';
 import CourseList from './pages/CourseList';
 import BoardList from './pages/BoardList';
 import StudentMyPage from './pages/StudentMyPage';
+import RegisterCourse from './pages/RegisterCourse';
+import BoardPost from './pages/BoardPost';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path="/courses/enroll" element={<CourseList />} />
         <Route path="/boards/lists" element={<BoardList />} />
         <Route path="/mypages/student" element={<StudentMyPage/>} />
+        <Route path="/courses/register" element={<RegisterCourse />} />
+        <Route path="/boards/post" element={<BoardPost />} />
       </Routes>
     </Router>
   );
