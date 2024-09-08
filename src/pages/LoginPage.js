@@ -19,10 +19,6 @@ const LoginPage = () => {
         localStorage.setItem('status', status);
         localStorage.setItem('name', name);
         localStorage.setItem('username', username);
-        console.log("userId: ", userId)
-        console.log("status: ", status);
-        console.log("name: ", name);
-        console.log("username: ", username);
         if (status === 'Professor'){
             console.log("userID: ", userId);
             navigate('/professor-main');

@@ -17,12 +17,12 @@ function App() {
   useEffect(() => {
     const storedUserId = localStorage.getItem('userId');
     setUserId(storedUserId);  // userId 상태 업데이트
-  }, []);
+  }, [userId]);
 
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LoginPage />} />
+        <Route path="/" element={<LoginPage />}/>
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/professor-main" element={userId ? <ProfessorMainPage /> : <Navigate to="/" />} />
         <Route path="/student-main" element={userId ? <StudentMainPage /> : <Navigate to="/" />} />
